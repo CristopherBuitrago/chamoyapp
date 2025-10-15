@@ -1,0 +1,51 @@
+/* Google Fonts: usa Nunito + Inter temporalmente */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables de color para usar en CSS puro si hace falta */
+:root{
+  --brand-primary: #273055;
+  --brand-accent:  #DB8367;
+  --brand-base:    #F1F1F2;
+}
+
+
+html, body, #root { height: 100%; }
+body { @apply bg-brand-base text-ink font-body; }
+/* Ocultar scrollbar horizontal (pero conservar el scroll) */
+.no-scrollbar {
+  scrollbar-width: none;             /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                     /* WebKit */
+}
+
+/* Fades/mascara en los bordes de la tira */
+.edge-fade {
+  --fade-w: 40px; /* ancho del desvanecido en máscara */
+  mask-image: linear-gradient(to right,
+    transparent 0,
+    #000 var(--fade-w),
+    #000 calc(100% - var(--fade-w)),
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(to right,
+    transparent 0,
+    #000 var(--fade-w),
+    #000 calc(100% - var(--fade-w)),
+    transparent 100%);
+}
+
+/* Overlays sutiles encima (ayudan a “sentir” el fade, pero no son obligatorios) */
+.fade-left {
+  background: linear-gradient(to right, rgba(241,242,244,0.95), rgba(241,242,244,0));
+}
+.fade-right {
+  background: linear-gradient(to left, rgba(241,242,244,0.95), rgba(241,242,244,0));
+}
+
+/* Oculta el scrollbar horizontal (Chrome/Edge/Firefox) */
+.no-scrollbar::-webkit-scrollbar { height: 0; }
+.no-scrollbar { scrollbar-width: none; }
