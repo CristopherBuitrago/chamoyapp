@@ -49,3 +49,53 @@ body { @apply bg-brand-base text-ink font-body; }
 /* Oculta el scrollbar horizontal (Chrome/Edge/Firefox) */
 .no-scrollbar::-webkit-scrollbar { height: 0; }
 .no-scrollbar { scrollbar-width: none; }
+
+/* --- SystemUsersPage layout --- */
+.users-layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+}
+
+.users-header {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 16px;
+  align-items: start;
+}
+
+.users-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.users-table-wrap {
+  /* espacio visual como en el wireframe */
+}
+
+.users-card {
+  border-radius: 16px !important;
+  box-shadow: 0 12px 28px rgba(39,48,85,0.10) !important;
+  overflow: hidden; /* redondeo también para la tabla */
+}
+
+/* --- Tabla: zebra + hover + header más claro --- */
+.users-table .ant-table-thead > tr > th {
+  background: #fafafa !important;
+  font-weight: 700;
+  color: #1f2a44;
+}
+
+.users-row.users-row--zebra > td {
+  background: #fcfcff;
+}
+
+.users-table .ant-table-tbody > tr:hover > td {
+  background: #f5f9ff !important;
+}
+
+/* Paginar a la derecha con un poco de respiración */
+.users-table .ant-table-pagination {
+  margin: 12px 16px !important;
+}

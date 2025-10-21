@@ -1,10 +1,10 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { SidebarItem } from "./SidebarItem";
 import { navForRole } from "../../../entities/nav/model/nav";
-import type { AppRole } from "../../../features/auth/lib/session";
+import type { Role } from "../../../entities/auth/model/roles";
 
 type SidebarProps = {
-  role: AppRole;
+  role: Role;
   collapsed: boolean;
   onToggle: () => void;
 };
@@ -28,7 +28,7 @@ export function Sidebar({ role, collapsed, onToggle }: SidebarProps) {
         ].join(" ")}
       >
         <img
-          src="/vite.svg"
+          src=""
           alt="logo"
           className={[
             "transition-all duration-300 ease-in-out",

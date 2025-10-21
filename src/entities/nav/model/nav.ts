@@ -1,4 +1,4 @@
-import type { AppRole } from "../../../features/auth/lib/session"
+import type { Role } from "../../auth/model/roles"
 import {
   Home,
   Settings,
@@ -22,7 +22,7 @@ export type NavItem = {
   icon?: React.ComponentType<{ size?: number; className?: string }>
   path?: string
   children?: NavItem[]
-  visibleRoles?: AppRole[]
+  visibleRoles?: Role[]
 }
 
 // Admin
@@ -167,6 +167,6 @@ export const NAV_CLIENT: NavItem[] = [
   },
 ]
 
-export function navForRole(role: AppRole): NavItem[] {
+export function navForRole(role: Role): NavItem[] {
   return role === "admin" ? NAV_ADMIN : NAV_CLIENT
 }

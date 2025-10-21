@@ -1,4 +1,4 @@
-export type Role = "admin" | "client";
+export type Role = "admin" | "client" | "superadmin";
 
 export type LoginDTO = {
   email: string;

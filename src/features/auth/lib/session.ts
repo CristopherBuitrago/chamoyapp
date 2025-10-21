@@ -1,9 +1,9 @@
-export type AppRole = 'admin' | 'client';
+import type { Role } from "../../../entities/auth/model/roles";
 
 export type SessionUser = {
   id: string;
   email: string;
-  role: AppRole;
+  role: Role;
   name: string;
 };
 
@@ -31,6 +31,6 @@ export function clearSession() {
   localStorage.removeItem(STORAGE_KEY);
 }
 
-export function getCurrentRole(): AppRole | null {
+export function getCurrentRole(): Role | null {
   return getSession()?.user.role ?? null;
 }

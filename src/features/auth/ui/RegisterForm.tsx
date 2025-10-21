@@ -22,7 +22,7 @@ export function RegisterForm() {
               background: "linear-gradient(135deg, #F1F1F2 0%, #7D85BF22 100%)",
             }}
           >
-            <img src="/vite.svg" alt="logo" />
+            <img src="" alt="logo" />
           </div>
 
           {/* Título */}

@@ -24,7 +24,7 @@ export function LoginForm() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl border border-gray-200 shadow-brand p-8">
           <div className="mx-auto mb-8 w-24 h-24 rounded-full grid place-items-center text-ink/70" style={{ background: 'linear-gradient(135deg, #F1F1F2 0%, #7D85BF22 100%)' }}>
-            <img src="/vite.svg" alt="logo" />
+            <img src="" alt="logo" />
           </div>
           {/* Email */}
           <label className="block text-sm mb-1">Email</label>
